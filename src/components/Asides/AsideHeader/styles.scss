@@ -1,0 +1,25 @@
+.aside-header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    min-height: 770px;
+    &-text {
+        position: absolute;
+        top: 229px;
+        left: 195px;
+        &__title {
+            @include fontMartel(900, 58px, 65px, $colorTitle);
+            margin: 0;
+            z-index: 3;
+            position: relative;
+            max-width: 509px;
+            letter-spacing: 0.2px;
+        }
+        &__subtitle {
+            @include fontMontserrat(500, 20px, 30px, $colorSubtitle);
+            letter-spacing: 0.2px;
+            margin: 0;
+            max-width: 376px;
+        }
+    }
+}

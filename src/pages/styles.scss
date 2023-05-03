@@ -1,0 +1,10 @@
+@import url('../fonts/fonts.scss');
+@import '../vendor/normalize.scss';
+body {
+    margin: 0;
+    background: $bcgColorBody;
+}
+.app {
+    max-width: $widthPage;
+    margin: 0 auto;
+}

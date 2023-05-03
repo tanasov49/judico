@@ -1,0 +1,17 @@
+.links-menu {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    gap: 23px;
+    &-item {
+        &::first-letter {
+            text-transform: uppercase;
+        }
+        &__link {
+            @include openSans(600, 14px, 24px, $colorLinkMenu);
+            text-decoration: none;
+            @include hoverOpenSans($colorLinkMenuHover);
+        }
+    }
+}

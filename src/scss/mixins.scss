@@ -1,0 +1,30 @@
+@mixin openSans($fw, $fs, $lh, $colText) {
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-weight: $fw;
+    font-size: $fs;
+    line-height: $lh;
+    color: $colText;
+}
+@mixin fontMartel($fw, $fs, $lh, $colText) {
+    font-family: 'Martel', "Arial", sans-serif;
+    font-weight: $fw;
+    font-size: $fs;
+    line-height: $lh;
+    color: $colText;
+}
+@mixin fontMontserrat($fw, $fs, $lh, $colText) {
+    font-family: 'Montserrat', "Arial", sans-serif;
+    font-weight: $fw;
+    font-size: $fs;
+    line-height: $lh;
+    color: $colText;
+}
+@mixin hoverOpenSans($colText) {
+    transition: color 0.7s;
+    &:hover {
+        color: $colText;
+    }
+    &:focus {
+        color: $colText;
+    }
+}
