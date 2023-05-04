@@ -1,8 +1,15 @@
 .subtitle-section {
     @include openSans(400, 14px, 20px, $colorSubtitle);
     margin: 0;
+    white-space: pre-line;
     &_section-matters {
         margin: 10px 0 0 0;
-        white-space: pre-line;
+    }
+    &_section-about {
+        margin: 15px 0 0 0;
+        text-align: center;
+    }
+    &_section-about-text {
+        margin: 10px 0 0 0;
     }
 }

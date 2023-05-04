@@ -1,4 +1,7 @@
 .title-section {
-    @include fontMartel(700, 40px, 50px, colorTitle);
+    @include fontMartel(700, 40px, 50px, $colorTitle);
     margin: 0;
+    white-space: pre-line;
+    &_section-about {
+    }
 }

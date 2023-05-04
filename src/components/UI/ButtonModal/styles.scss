@@ -27,13 +27,14 @@
         grid-column: 1;
     }
     &_section-matters__buttons {
-        color: $colorTextButton;
-        border: 1px solid $colorTextButton;
-        @include hoverButtonModal($colorTextButtonHover, $colorBcgButtonHover);
+        color: $colorTextButton2;
+        border: 1px solid $colorTextButton2;
+        @include hoverButtonModal($colorTextButtonHover2, $colorBcgButtonHover2);
+
     }
     &_learn_section-matters__buttons {
-        color: $colorTextButton;
-        border: 1px solid $colorTextButton;
-        @include hoverButtonModal($colorTextButtonHover, $colorBcgButtonHover);
+        color: $colorTextButton2;
+        border: 1px solid $colorTextButton2;
+        @include hoverButtonModal($colorTextButtonHover2, $colorBcgButtonHover2);
     }
 }

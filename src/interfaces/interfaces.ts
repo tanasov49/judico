@@ -6,3 +6,8 @@ export interface IMatters {
     title: string
     SvgImage: string
 }
+export interface ISkillsAbout {
+    title: string,
+    subtitle: string,
+    SvgImage: string
+}

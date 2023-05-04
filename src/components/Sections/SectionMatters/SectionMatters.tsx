@@ -1,10 +1,12 @@
-import React from "react";
+import React, {useState} from "react";
 import "./styles.scss";
 import TitleSection from "@components/UI/TitleSection/TitleSection";
 import SubtitleSection from "@components/UI/SubtitleSection/SubtitleSection";
 import { mattersClient } from "@data";
 import ButtonModal from "@components/UI/ButtonModal/ButtonModal";
+
 function SectionMatters() {
+    
     return (
         <section className="section-matters">
             <TitleSection
