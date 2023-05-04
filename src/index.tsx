@@ -1,12 +1,12 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import App from "../App";
-import "./styles.scss";
+import App from "@components/App";
+import "./styles/styles.scss";
 const container = document.querySelector(".app") as HTMLElement;
 const root = createRoot(container);
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 root.render(
-    <BrowserRouter>
+    <HashRouter>
         <App />
-    </BrowserRouter>
+    </HashRouter>
 );

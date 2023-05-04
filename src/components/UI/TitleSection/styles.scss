@@ -1,0 +1,4 @@
+.title-section {
+    @include fontMartel(700, 40px, 50px, colorTitle);
+    margin: 0;
+}

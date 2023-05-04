@@ -5,14 +5,14 @@
     border: none;
     padding: 0;
     @include openSansButton(700, 14px, 28px);
-    background: transparent;
+    background: $colorBcgButton;
     cursor: pointer;
+    color: $colorTextButton;
     &_learn {
         width: 155px;
         height: 48px;
     }
     &_aside-header {
-        background: $colorBcgButton;
         border: 1px solid $colorTextButton;
         @include hoverButtonModal($colorTextButtonHover, $colorBcgButtonHover);
         grid-row: 3;
@@ -25,5 +25,15 @@
         @include hoverButtonModal($colorTextButtonHover, $colorBcgButtonHover);
         grid-row: 3;
         grid-column: 1;
+    }
+    &_section-matters__buttons {
+        color: $colorTextButton;
+        border: 1px solid $colorTextButton;
+        @include hoverButtonModal($colorTextButtonHover, $colorBcgButtonHover);
+    }
+    &_learn_section-matters__buttons {
+        color: $colorTextButton;
+        border: 1px solid $colorTextButton;
+        @include hoverButtonModal($colorTextButtonHover, $colorBcgButtonHover);
     }
 }
