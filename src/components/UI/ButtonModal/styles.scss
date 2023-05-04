@@ -1,0 +1,29 @@
+.button-modal {
+    width: 182px;
+    height: 48px;
+    border-radius: 37px;
+    border: none;
+    padding: 0;
+    @include openSansButton(700, 14px, 28px);
+    background: transparent;
+    cursor: pointer;
+    &_learn {
+        width: 155px;
+        height: 48px;
+    }
+    &_aside-header {
+        background: $colorBcgButton;
+        border: 1px solid $colorTextButton;
+        @include hoverButtonModal($colorTextButtonHover, $colorBcgButtonHover);
+        grid-row: 3;
+        grid-column: 1;
+    }
+    &_learn_aside-header {
+        background: $colorBcgButton;
+        margin: 0 0 0 200px;
+        border: 1px solid $colorTextButton;
+        @include hoverButtonModal($colorTextButtonHover, $colorBcgButtonHover);
+        grid-row: 3;
+        grid-column: 1;
+    }
+}

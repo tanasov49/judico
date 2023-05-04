@@ -1,25 +1,35 @@
 .aside-header {
-    position: absolute;
+    position: relative;
     left: 0;
     top: 0;
-    min-height: 770px;
-    &-text {
+    width: 100%;
+    display: grid;
+    gap: 35px 0;
+    padding: 0 0 168px 195px;
+    box-sizing: border-box;
+    height: 770px;
+    &__image {
         position: absolute;
-        top: 229px;
-        left: 195px;
-        &__title {
-            @include fontMartel(900, 58px, 65px, $colorTitle);
-            margin: 0;
-            z-index: 3;
-            position: relative;
-            max-width: 509px;
-            letter-spacing: 0.2px;
-        }
-        &__subtitle {
-            @include fontMontserrat(500, 20px, 30px, $colorSubtitle);
-            letter-spacing: 0.2px;
-            margin: 0;
-            max-width: 376px;
-        }
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        object-fit: cover;
+    }
+    &__title {
+        padding: 225px 0 0 0;
+        @include fontMartel(900, 58px, 65px, $colorTitle);
+        margin: 0;
+        max-width: 509px;
+        letter-spacing: 0.2px;
+        grid-row: 1;
+    }
+    &__subtitle {
+        @include fontMontserrat(500, 20px, 30px, $colorSubtitle);
+        letter-spacing: 0.2px;
+        margin: 0;
+        max-width: 376px;
+        padding: 0 0 0 0;
+        grid-row: 2;
     }
 }

@@ -28,3 +28,22 @@
         color: $colText;
     }
 }
+@mixin openSansButton($fw, $fs, $lh) {
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-weight: $fw;
+    font-size: $fs;
+    line-height: $lh;
+}
+@mixin hoverButtonModal($colText, $bcg) {
+    transition: color 0.7s, background 0.7s;
+    &:hover {
+        color: $colText;
+        background: $bcg;
+        border: none;
+    }
+    &:focus {
+        color: $colText;
+        background: $bcg;
+        border: none;
+    }
+}
