@@ -1,4 +1,10 @@
-import { ILinks, IMatters, IReviews, ISkillsAbout } from "@interfaces";
+import {
+    IAttorneys,
+    ILinks,
+    IMatters,
+    IReviews,
+    ISkillsAbout,
+} from "@interfaces";
 
 export const linksMenuNav: ILinks[] = [
     { title: "home", href: "/" },
@@ -56,5 +62,35 @@ export const reviewsClients: IReviews[] = [
         rating: 4,
         text: "This proved to be impossible using the traditional concepts of space and time. Einstein developed a new view of time first and then space. This proved to be impossible using the traditional concepts of space and time. Einstein developed a new view of time first and then space.",
         image: Client3,
+    },
+];
+import AshleyPhoto from "@images/layer_ceo.png";
+import RoneyPhoto from "@images/ceo.png";
+import AviePhoto from "@images/layer.png";
+import BenPhoto from "@images/co_founder.png";
+export const attorneys: IAttorneys[] = [
+    {
+        name: "Ashley Fletcher",
+        subtitle: "the quick fox jumps over the lazy dog",
+        position: "LAYER & CEO",
+        photo: AshleyPhoto,
+    },
+    {
+        name: "Rodney Stratton",
+        subtitle: "the quick fox jumps over the lazy dog",
+        position: "CEO",
+        photo: RoneyPhoto,
+    },
+    {
+        name: "Avie Beaton",
+        subtitle: "the quick fox jumps over the lazy dog",
+        position: "LAYER CIVIL LAW",
+        photo: AviePhoto,
+    },
+    {
+        name: "Ben Jonson",
+        subtitle: "the quick fox jumps over the lazy dog",
+        position: "CO FOUNDER & CEO",
+        photo: BenPhoto,
     },
 ];

@@ -19,18 +19,30 @@ function SectionReviews() {
             />
             <div className="slides-clients">
                 <Swiper
-                slidesPerView={3}
-                spaceBetween={127}
-                centeredSlides={true}
+                    slidesPerView={3}
+                    spaceBetween={127}
+                    centeredSlides={true}
                 >
                     {reviewsClients.map((item, key) => (
-                        <SwiperSlide className="swiper-slide-item" key={key}
-                        >
-                            <img className="swiper-slide-item__image" src={item.image} alt={`photo ${item.name}`} />
-                            <h4 className="swiper-slide-item__title">{item.name}</h4>
-                            <p className="swiper-slide-item__subtitle">{item.subtitle}</p>
-                            <Rating classRating='slides-clients' rating={item.rating} />
-                            <p className="swiper-slide-item__text">{item.text}</p>
+                        <SwiperSlide className="swiper-slide-item" key={key}>
+                            <img
+                                className="swiper-slide-item__image"
+                                src={item.image}
+                                alt={`photo ${item.name}`}
+                            />
+                            <h4 className="swiper-slide-item__title">
+                                {item.name}
+                            </h4>
+                            <p className="swiper-slide-item__subtitle">
+                                {item.subtitle}
+                            </p>
+                            <Rating
+                                classRating="slides-clients"
+                                rating={item.rating}
+                            />
+                            <p className="swiper-slide-item__text">
+                                {item.text}
+                            </p>
                         </SwiperSlide>
                     ))}
                 </Swiper>

@@ -1,22 +1,47 @@
+//widths
+$widthPage: 1440px;
+
+
+
+
+//background colors
 $bcgColorBody: #EDEDED;
 $bcgPage: #FFFFFF;
-$widthPage: 1440px;
+$bcgSectionBlue: #295C7A;
+$bcgMatterSvgHover: #85b8d5;
+$bcgBlock: #FFFFFF;
+$colorBcgButton: transparent;
+$bcgSection: #FAFAFA;
+
+
+
+
+// colors text
 $colorLinkMenu: #737373;
-$colorLinkMenuHover: #bb5d5d;
 $colorTitle: #252B42;
 $colorSubtitle: #737373;
 $colorTextButton: #784F33;
-$colorBcgButton: transparent;
-$colorTextButtonHover: #FFFFFF;
-$colorBcgButtonHover: #784F33;
-$bcgMatterSvg: #295C7A;
-$bcgSectionBlue: #295C7A;
-$bcgMatterSvgHover: #85b8d5;
-$fillSvgHover: #2fc7ae;
 $colorTextButton2: #295C7A;
-$colorTextButtonHover2: #FFFFFF;
-$colorBcgButtonHover2: #295C7A;
-$bcgSection: #FAFAFA;
 $colorTitleWhite: #FFFFFF;
 $colorSubtitleWhite: #FFFFFF;
-$bcgBlock: #FFFFFF;
+$colorTextYellow: #D0A144;
+
+
+
+
+// colors text hover
+$colorLinkMenuHover: #bb5d5d;
+$colorTextButtonHover: #FFFFFF;
+$colorBcgButtonHover: #784F33;
+$colorTextButtonHover2: #FFFFFF;
+$colorBcgButtonHover2: #295C7A;
+
+
+
+
+//colors for svg
+$bcgMatterSvg: #295C7A;
+$fillSvgHover: #2fc7ae;
+
+
+

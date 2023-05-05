@@ -18,3 +18,9 @@ export interface IReviews {
     text: string,
     image: string
 }
+export interface IAttorneys {
+    position: string,
+    name: string,
+    subtitle: string
+    photo: string
+}
