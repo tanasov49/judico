@@ -1,0 +1,12 @@
+.rating {
+    display: flex;
+    gap: 2px;
+    &_slides-clients {
+        margin: 15px 0 0 0;
+    }
+    &__svg {
+        &_active {
+            fill: #F3CD03;
+        }
+    }
+}

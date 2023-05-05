@@ -11,3 +11,10 @@ export interface ISkillsAbout {
     subtitle: string,
     SvgImage: string
 }
+export interface IReviews {
+    name: string,
+    subtitle: string,
+    rating: number,
+    text: string,
+    image: string
+}

@@ -2,6 +2,7 @@
     @include fontMartel(700, 40px, 50px, $colorTitle);
     margin: 0;
     white-space: pre-line;
-    &_section-about {
+    &_section-reviews {
+        color: $colorSubtitleWhite;
     }
 }

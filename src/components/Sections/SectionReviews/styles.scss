@@ -1,0 +1,41 @@
+.section-reviews {
+    padding: 80px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: $bcgSectionBlue;
+}
+.slides-clients {
+    max-width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    padding: 90px 0 0 0;
+}
+.swiper-slide-item {
+    padding: 30px 60px;
+    background: $bcgBlock;
+    width: 460px !important;
+    height: 288px;
+    box-sizing: border-box;
+    &__image {
+        position: absolute;
+        top: 28px;
+        left: -79px;
+        width: 96px;
+        height: 96px;
+    }
+    &__title {
+        @include fontMartel(700, 24px, 32px, $colorTitle);
+        margin: 0;
+    }
+    &__subtitle {
+        @include openSans(700, 14px, 24px, $colorSubtitle);
+        margin: 0;
+    }
+    &__text {
+        @include openSans(400, 14px, 20px, $colorSubtitle);
+        margin: 15px 0 0 0;
+    }
+}

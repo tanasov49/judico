@@ -58,6 +58,7 @@
     "sass-loader": "^13.2.0",
     "source-map-loader": "^4.0.1",
     "svg-url-loader": "^8.0.0",
+    "swiper": "^9.2.4",
     "ts-loader": "^9.4.2",
     "tsconfig-paths": "^4.2.0",
     "tsconfig-paths-webpack-plugin": "^4.0.1",

@@ -7,7 +7,7 @@ declare module "*.png"
 declare module "*.gif"
 // Отдельно использовать для импорта SVG, в качестве компонента и ссылки на изображение
 declare module "*.svg" {
-  const content: string;
+  const ReactComponent: React.FC<React.SVGProps<SVGSVGElement>>;
   export default content;
 }
 declare module "*.svg?url" {
