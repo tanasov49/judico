@@ -5,8 +5,11 @@ import "./styles/styles.scss";
 const container = document.querySelector(".app") as HTMLElement;
 const root = createRoot(container);
 import { HashRouter } from "react-router-dom";
+import { ModalState } from "@context";
 root.render(
     <HashRouter>
-        <App />
+        <ModalState>
+            <App />
+        </ModalState>
     </HashRouter>
 );

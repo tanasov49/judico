@@ -91,7 +91,8 @@ module.exports = {
       '@components': path.resolve(__dirname, './src/components'),
       '@images': path.resolve(__dirname, './src/images'),
       "@data": path.resolve(__dirname, "./src/data/data.ts"),
-      "@interfaces": path.resolve(__dirname, "./src/interfaces/interfaces.ts")
+      "@interfaces": path.resolve(__dirname, "./src/interfaces/interfaces.ts"),
+      "@context": path.resolve(__dirname, "./src/context/context.tsx")
     },
   },
   plugins: [

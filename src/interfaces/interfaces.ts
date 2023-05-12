@@ -24,3 +24,6 @@ export interface IAttorneys {
     subtitle: string
     photo: string
 }
+export interface ISelect {
+    title: string,
+}

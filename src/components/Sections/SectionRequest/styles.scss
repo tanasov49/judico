@@ -1,0 +1,17 @@
+.section-request {
+    padding: 0 0 416px 0;
+    background: $bcgSection;
+    position: relative;
+    &-text {
+        background: $bcgSectionBlue;
+        padding: 100px 197px 465px 195px;
+        display: grid;
+        &__image {
+            width: 415px;
+            height: 169px;
+            grid-column: 2;
+            grid-row: 1 / 3;
+        }
+    }
+
+}

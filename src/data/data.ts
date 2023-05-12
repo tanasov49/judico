@@ -3,6 +3,7 @@ import {
     ILinks,
     IMatters,
     IReviews,
+    ISelect,
     ISkillsAbout,
 } from "@interfaces";
 
@@ -94,3 +95,18 @@ export const attorneys: IAttorneys[] = [
         photo: BenPhoto,
     },
 ];
+export const selectsDepartaments: ISelect[] = [
+    {title: 'List Entry # 1'},
+    {title: 'List Entry # 1'},
+    {title: 'List Entry # 2'},
+    {title: 'List Entry # 3'},
+    {title: 'List Entry # 4'},
+    {title: 'List Entry # 5'}
+]
+export const selectTimes: ISelect[] = [
+    {title: '4:00 Available'},
+    {title: '5:00 Available'},
+    {title: '6:00 Available'},
+    {title: '7:00 Available'},
+    {title: '8:00 Available'}
+]

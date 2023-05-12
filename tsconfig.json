@@ -5,7 +5,8 @@
       "@components/*": [ "./src/components/*", "./src/components/"],
       "@images": ["./src/images", "./src/images/*"],
       "@data": ["./src/data/data.ts"],
-      "@interfaces": ["./src/interfaces/interfaces.ts"]
+      "@interfaces": ["./src/interfaces/interfaces.ts"],
+      "@context": ["./src/context/context.tsx"]
     },
     "lib": [
       "dom",
