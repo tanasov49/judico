@@ -1,7 +1,7 @@
 import {
     IAttorneys,
     ILinks,
-    IMatters,
+    ILinksSvg,
     IReviews,
     ISelect,
     ISkillsAbout,
@@ -17,7 +17,7 @@ import SvgImage1 from "@images/svg/svg1.svg";
 import SvgImage2 from "@images/svg/svg2.svg";
 import SvgImage3 from "@images/svg/svg3.svg";
 
-export const mattersClient: IMatters[] = [
+export const mattersClient: ILinksSvg[] = [
     { title: "Frauds or Mislead", SvgImage: SvgImage1 },
     { title: "Bailes & Warrants", SvgImage: SvgImage2 },
     { title: "Federal Drug Crimes", SvgImage: SvgImage3 },
@@ -96,17 +96,46 @@ export const attorneys: IAttorneys[] = [
     },
 ];
 export const selectsDepartaments: ISelect[] = [
-    {title: 'List Entry # 1'},
-    {title: 'List Entry # 1'},
-    {title: 'List Entry # 2'},
-    {title: 'List Entry # 3'},
-    {title: 'List Entry # 4'},
-    {title: 'List Entry # 5'}
-]
+    { title: "List Entry # 1" },
+    { title: "List Entry # 1" },
+    { title: "List Entry # 2" },
+    { title: "List Entry # 3" },
+    { title: "List Entry # 4" },
+    { title: "List Entry # 5" },
+];
 export const selectTimes: ISelect[] = [
-    {title: '4:00 Available'},
-    {title: '5:00 Available'},
-    {title: '6:00 Available'},
-    {title: '7:00 Available'},
-    {title: '8:00 Available'}
+    { title: "4:00 Available" },
+    { title: "5:00 Available" },
+    { title: "6:00 Available" },
+    { title: "7:00 Available" },
+    { title: "8:00 Available" },
+];
+
+import FacebookSvg from "../images/svg/facebook.svg?url";
+import InstagramSvg from "../images/svg/instagram.svg?url";
+import TwitterSvg from "../images/svg/twitter.svg?url";
+import YoutubeSvg from "../images/svg/youtube.svg?url";
+export const linksSocial: ILinksSvg[] = [
+    { title: "facebook", SvgImage: FacebookSvg, href: "facebook.com" },
+    { title: "instagram", SvgImage: InstagramSvg, href: "inctagram.com" },
+    { title: "twitter", SvgImage: TwitterSvg, href: "twitter.com" },
+    { title: "twitter", SvgImage: YoutubeSvg, href: "youtube.com" },
+];
+export const linksCompanyMenu: ILinks[] = [
+    {title: 'About Us', href: '/about'},
+    {title: 'Carrier', href: '/carrier'},
+    {title: 'We are hiring', href: '/hiring'},
+    {title: 'Blog', href: '/blog'}
+]
+export const linksFeaturesMenu: ILinks[] = [
+    {title: 'Business Marketing', href: '/marketing'},
+    {title: 'User Analytic', href: '/analytic'},
+    {title: 'Live Chat', href: '/live_chat'},
+    {title: 'Unlimited Support', href: '/unlimited_support'},
+]
+export const linksResourcesMenu: ILinks[]= [
+    {title: 'IOS & Android', href: '/iosandandroid'},
+    {title: 'Watch a Demo', href: '/watch_demo'},
+    {title: 'Customers', href: '/customers'},
+    {title: 'API', href: '/api'},
 ]

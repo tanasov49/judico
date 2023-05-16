@@ -2,9 +2,10 @@ export interface ILinks {
     title: string,
     href: string,
 }
-export interface IMatters {
+export interface ILinksSvg {
     title: string
     SvgImage: string
+    href?: string
 }
 export interface ISkillsAbout {
     title: string,
