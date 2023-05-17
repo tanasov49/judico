@@ -1,0 +1,12 @@
+.not-found {
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__link {
+        @include openSans(600, 28px, 32px, $colorLinkMenu);
+        text-decoration: none;
+        margin: 40px 0 0 0;
+        @include hoverOpenSans($colorLinkMenuHover);
+    }
+}

@@ -5,7 +5,7 @@ import SubtitleSection from '@components/UI/SubtitleSection/SubtitleSection';
 import { attorneys } from '@data';
 function SectionAttorneys() {
     return (
-        <section className='section-attorneys'>
+        <>
             <TitleSection title='Meet Our Attorneys' classTitle='section-attorneys' />
             <SubtitleSection subtitle={`Problems trying to resolve the conflict between \n the two major realms of Classical physics: Newtonian mechanics `} classSubtitle='section-attorneys' />
             <ul className="attorneys">
@@ -18,7 +18,7 @@ function SectionAttorneys() {
                 </li>
                 )}
             </ul>
-        </section>
+        </>
     );
 }
 

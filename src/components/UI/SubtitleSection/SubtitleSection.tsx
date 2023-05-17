@@ -4,11 +4,23 @@ interface ISubtitle {
     subtitle: string,
     classSubtitle: string
 }
-function SubtitleSection({subtitle, classSubtitle}) {
+import { motion } from 'framer-motion';
+function SubtitleSection({subtitle, classSubtitle}: ISubtitle) {
+    const animateText = {
+        hidden: {
+            y: -200,
+            opacity: 0
+        },
+        visible: (custom: number) => ({
+            y: 0,
+            opacity: 1,
+            transition: {delay: custom * 0.2, duration: 1},
+        })
+    }
     return (
-        <p className={`subtitle-section subtitle-section_${classSubtitle}`}>
+        <motion.p custom={1} variants={animateText} className={`subtitle-section subtitle-section_${classSubtitle}`}>
             {subtitle}
-        </p>
+        </motion.p>
     );
 }
 

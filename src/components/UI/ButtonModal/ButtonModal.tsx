@@ -5,24 +5,38 @@ interface IButtonModal {
     classButton: string;
     buttonType: boolean;
 }
+import { motion } from "framer-motion";
 function ButtonModal({ buttonText, classButton, buttonType }: IButtonModal) {
+    const animateButton = {
+        hidden: {
+            opacity: 0,
+        },
+        visible: (custom: number) => ({
+            opacity: 1,
+            transition: { delay: custom , duration: 1.5 },
+        }),
+    };
     if (buttonType) {
         return (
-            <button
+            <motion.button
+                custom={1}
+                variants={animateButton}
                 type="button"
                 className={`button-modal button-modal_${classButton}`}
             >
                 {buttonText}
-            </button>
+            </motion.button>
         );
     } else {
         return (
-            <button
+            <motion.button
+                custom={1}
+                variants={animateButton}
                 type="button"
                 className={`button-modal button-modal_learn button-modal_learn_${classButton}`}
             >
                 {buttonText}
-            </button>
+            </motion.button>
         );
     }
 }

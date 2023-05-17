@@ -12,7 +12,7 @@ function SectionAbout() {
         showVideoFrame(true);
     };
     return (
-        <section className="section-about">
+        <>
             <TitleSection title="Who We Are" classTitle="section-about" />
             <SubtitleSection
                 subtitle={`Problems trying to resolve the conflict between the two major realms \n of Classical physics: Newtonian mechanics`}
@@ -66,7 +66,7 @@ function SectionAbout() {
                     </ul>
                 </div>
             </div>
-        </section>
+        </>
     );
 }
 

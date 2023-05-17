@@ -7,7 +7,7 @@ function LinksMenu() {
         <ul className='links-menu'>
             {linksMenuNav.map((item, key) => 
             <li key={key} className='links-menu-item'>
-                <Link className='links-menu-item__link' to={item.href}>{item.title}</Link>
+                <Link className='links-menu-item__link' to={`${item.href}`}>{item.title}</Link>
             </li>
             )}
         </ul>

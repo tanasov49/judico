@@ -1,6 +1,7 @@
 import React from "react";
 import "./styles.scss";
 import { linksCompanyMenu, linksFeaturesMenu, linksResourcesMenu, linksSocial } from "@data";
+import { Link } from 'react-router-dom';
 function Footer() {
     return (
         <footer className="footer">
@@ -16,12 +17,12 @@ function Footer() {
                                 className="footer-info-block-social-item"
                                 key={key}
                             >
-                                <a
+                                <Link
                                     target="_blank"
-                                    href={`https://${item.href}`}
+                                    to={`https://${item.href}`}
                                 >
                                     <img alt={item.title} src={item.SvgImage} />
-                                </a>
+                                </Link>
                             </li>
                         ))}
                     </ul>
@@ -34,7 +35,7 @@ function Footer() {
                                 className="footer-info-block-menu__item"
                                 key={key}
                             >
-                                <a href={item.href}>{item.title}</a>
+                                <Link to={item.href}>{item.title}</Link>
                             </li>
                         ))}
                     </ul>
@@ -44,7 +45,7 @@ function Footer() {
                     <ul className="footer-info-block-menu">
                         {linksFeaturesMenu.map((item, key: number) => 
                         <li key={key} className="footer-info-block-menu__item">
-                            <a href={item.href}>{item.title}</a>
+                            <Link to={item.href}>{item.title}</Link>
                         </li>
                         )}
                     </ul>

@@ -8,7 +8,7 @@ import { reviewsClients } from "@data";
 import Rating from "@components/UI/Rating/Rating";
 function SectionReviews() {
     return (
-        <section className="section-reviews">
+        <>
             <TitleSection
                 title="What Clients Say"
                 classTitle="section-reviews"
@@ -47,7 +47,7 @@ function SectionReviews() {
                     ))}
                 </Swiper>
             </div>
-        </section>
+        </>
     );
 }
 
