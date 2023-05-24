@@ -6,6 +6,8 @@ import HomePage from "../pages/HomePage";
 import Footer from "@components/Body/Footer/Footer";
 import { motion, useScroll } from "framer-motion";
 import NotFound from "../pages/NotFound";
+import Popup from "@components/UI/Popup/Popup";
+import FormRequest from "@components//UI/FormRequest/FormRequest";
 
 function App() {
     const { scrollYProgress } = useScroll();
@@ -23,6 +25,9 @@ function App() {
                 </Routes>
             </Main>
             <Footer />
+            <Popup>
+                <FormRequest classForm="learn-more" />
+            </Popup>
         </>
     );
 }

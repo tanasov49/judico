@@ -5,16 +5,31 @@
         margin: 50px 0 0 0;
         display: flex;
         gap: 10px;
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        padding: 148px 42px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
 .matters-client {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     gap: 30px;
     grid-template-columns: repeat(3, minmax(min-content, 328px));
     padding: 45px 0 0 0;
+    @media screen and (max-width: 768px) {
+        justify-content: center;
+    }
     &-item {
         display: flex;
         align-items: center;
@@ -26,6 +41,7 @@
         border: 1px solid #e2e2e2;
         height: 112px;
         box-sizing: border-box;
+        width: 328px;
         &__logo {
             width: 72px;
             height: 72px;

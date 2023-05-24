@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./styles.scss";
 import TitleSection from "@components/UI/TitleSection/TitleSection";
 import SubtitleSection from "@components/UI/SubtitleSection/SubtitleSection";
@@ -7,6 +7,18 @@ import "swiper/scss";
 import { reviewsClients } from "@data";
 import Rating from "@components/UI/Rating/Rating";
 function SectionReviews() {
+    const [slideOption, setSlideOption] = useState({
+        spaceBetween: 0,
+        direction: '',
+        centered: true
+    })
+    useEffect(() => {
+        if (window.innerWidth > 768) {
+            setSlideOption({...slideOption, spaceBetween: 127, direction: 'horizontal', centered: true});
+        } else {
+            setSlideOption({...slideOption,  spaceBetween: 30, direction: 'vertical', centered: false});
+        };
+    },[]);
     return (
         <>
             <TitleSection
@@ -19,9 +31,11 @@ function SectionReviews() {
             />
             <div className="slides-clients">
                 <Swiper
-                    slidesPerView={3}
-                    spaceBetween={127}
-                    centeredSlides={true}
+                    direction={`${slideOption.direction}`}
+                    slidesPerView={'auto'}
+                    spaceBetween={slideOption.spaceBetween}
+                    centeredSlides={slideOption.centered}
+                    navigation={true}
                 >
                     {reviewsClients.map((item, key) => (
                         <SwiperSlide className="swiper-slide-item" key={key}>

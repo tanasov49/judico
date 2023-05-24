@@ -2,11 +2,12 @@
     padding: 80px 0;
     &-info {
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
-        gap: 98px;
+        gap: 72px;
         &-block {
             display: flex;
-            max-width: 241px;
+            width: 241px;
             flex-direction: column;
             &__title {
                 @include fontMartel(700, 24px, 32px, $colorTitle);

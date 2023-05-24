@@ -7,9 +7,6 @@ import { motion } from "framer-motion";
 function Section({ sectionClass, children }: ISection) {
     return (
         <motion.section
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ amount: 0.5 }}
             className={sectionClass}
         >
             {children}

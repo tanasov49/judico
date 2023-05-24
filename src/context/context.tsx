@@ -9,12 +9,17 @@ interface IModalContext {
     ) => void;
     canSubmit: boolean;
     hanldeSubmitForm: (e: React.SyntheticEvent<EventTarget>) => void;
+    handleMenu: ()  => void,
+    openMenu: boolean,
+    openPopup: boolean,
+    hadnlePopup: () => void,
+    rootRef: any,
 }
 interface IValues {
     name: string;
     email: string;
     departament: string;
-    times: string
+    times: string;
 }
 interface IValid {
     validName: boolean;
@@ -28,25 +33,54 @@ export const ModalContext = createContext<IModalContext>({
     handleChange: () => {},
     canSubmit: false,
     hanldeSubmitForm: () => {},
+    handleMenu: () => {},
+    openMenu: false,
+    openPopup: false,
+    hadnlePopup: () => {},
+    rootRef: null
 });
 export const ModalState = ({ children }: { children: React.ReactNode }) => {
     const defaulValues: IValues = {
         name: "",
         email: "",
         departament: "",
-        times: ''
+        times: "",
     };
     const defaultValid: IValid = {
         validName: false,
         validEmail: false,
         validDep: false,
-        validTime: false
+        validTime: false,
     };
+    const [openPopup, setOpenPopup] = useState<boolean>(false)
     const [values, setValues] = useState(defaulValues);
     const [errors, setErrors] = useState(defaulValues);
     const [valid, setValid] = useState(defaultValid);
+    const [openMenu, setOpenMenu] = useState<boolean>(false);
     const [canSubmit, setCanSubmit] = useState<boolean>(false);
     useState<string>("Please Select");
+    const hadnlePopup = () => {
+        if (!openPopup) setOpenPopup(true);
+        else setOpenPopup(false)
+    }
+    const rootRef = useRef<HTMLDivElement>(null);
+
+
+    useEffect(() => {
+        const handleClickOutSide = (e: MouseEvent) => {
+            if (openPopup && rootRef.current && !rootRef.current.contains(e.target as Node)) {
+                setOpenPopup(false)
+            } 
+          }
+        document.addEventListener('mousedown', handleClickOutSide)
+        return () => {
+          document.removeEventListener('mousedown', handleClickOutSide)
+        }
+      },[openPopup])
+    const handleMenu = () => {
+        if (!openMenu) setOpenMenu(true);
+        else setOpenMenu(false);
+    };
     const handleValidate = (name: string, value: string): void => {
         let regesName =
             /^[a-zA-Z0-9]+([a-zA-Z0-9](_|-| )[a-zA-Z0-9])*[a-zA-Z0-9]+$/;
@@ -97,7 +131,7 @@ export const ModalState = ({ children }: { children: React.ReactNode }) => {
             validName: validName,
             validEmail: validEmail,
             validDep: validDep,
-            validTime: validTime
+            validTime: validTime,
         });
         setCanSubmit(validName && validEmail && validDep && validTime);
     };
@@ -133,6 +167,7 @@ export const ModalState = ({ children }: { children: React.ReactNode }) => {
         setValid(defaultValid);
         setCanSubmit(false);
         console.log(values);
+        if (openPopup) hadnlePopup();
     };
 
     return (
@@ -143,6 +178,11 @@ export const ModalState = ({ children }: { children: React.ReactNode }) => {
                 handleChange,
                 canSubmit,
                 hanldeSubmitForm,
+                handleMenu,
+                openMenu,
+                openPopup,
+                hadnlePopup,
+                rootRef
             }}
         >
             {children}

@@ -2,11 +2,28 @@
     @include fontMartel(700, 40px, 50px, $colorTitle);
     margin: 0;
     white-space: pre-line;
+    @media screen and (max-width: 768px) {
+        max-width: 330px;
+    }
     &_section-reviews {
         color: $colorSubtitleWhite;
+        @media screen and (max-width: 768px) {
+            text-align: center;
+        }
+    }
+    &_section-attorneys {
+        @media screen and (max-width: 768px) {
+            text-align: center;
+        }
     }
     &_section-request-text {
         color: $colorSubtitleWhite;
+        grid-row: 1;
+        grid-column: 1;
+        @media screen and (max-width: 768px) {
+            text-align: center;
+
+        }
     }
     &_form-request {
         margin: 0 0 40px 0;

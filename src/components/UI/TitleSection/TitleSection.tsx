@@ -6,19 +6,10 @@ interface ITitle {
 }
 import { motion } from 'framer-motion';
 function TitleSection({title, classTitle}) {
-    const animateText = {
-        hidden: {
-            y: -200,
-            opacity: 0
-        },
-        visible: (custom: number) => ({
-            y: 0,
-            opacity: 1,
-            transition: {delay: custom * 0.2, duration: 1},
-        })
-    }
+
     return (
-        <motion.h2 variants={animateText} custom={1} className={`title-section title-section_${classTitle}`}>
+        <motion.h2 initial={{y: -100, opacity: 0}}
+        whileInView={{y: 0, opacity: 1}} viewport={{ amount: 0.5 }} transition={{ duration: 1.5 }} className={`title-section title-section_${classTitle}`}>
             {title}
         </motion.h2>
     );

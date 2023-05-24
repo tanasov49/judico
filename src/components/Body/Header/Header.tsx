@@ -1,9 +1,11 @@
 import Nav from '@components/UI/Nav/Nav';
-import React from 'react';
+import React, {useContext} from 'react';
 import './styles.scss'
+import { ModalContext } from '@context';
 function Header() {
+    const {openMenu} = useContext(ModalContext)
     return (
-        <header className='header'>
+        <header className={openMenu ? 'header header_active' : 'header'}>
             <Nav />
         </header>
     );

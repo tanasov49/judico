@@ -4,4 +4,67 @@
     gap: 147px;
     position: relative;
     z-index: 3;
+    @media screen and (max-width: 768px) {
+        gap: 0;
+        justify-content: space-between;
+        padding: 36px 35px 0;
+    }
+}
+.button-menu {
+    width: 23px;
+    height: 14px;
+    cursor: pointer;
+    display: none;
+    @media screen and (max-width: 768px) {
+        display: block;
+    }
+    span {
+        position: relative;
+        width: 23px;
+        height: 1px;
+        background-color: $colorLinkMenu;
+        display: block;
+        transition: color 0.7s;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 80%;
+            height: 1px;
+            background-color: $colorLinkMenu;
+            top: 5px;
+            transform: translateX(25%);
+            transition: transform 0.7s, color 0.7s;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            width: 50%;
+            height: 1px;
+            background-color: $colorLinkMenu;
+            top: 10px;
+            transform: translateX(100%);
+            transition: transform 0.7s, color 0.7s;
+        }
+    }
+    &_active {
+        span {
+            background-color: $colorLinkMenuHover;
+            &::before {
+                transform: translateX(0);
+                background-color: $colorLinkMenuHover;
+            }
+            &::after {
+                transform: translateX(0);
+                background-color: $colorLinkMenuHover;
+            }
+        }
+    }
+}
+@keyframes animateMenu {
+    from {
+        right: 0;
+    }
+    to {
+        left: 0;
+    }
 }

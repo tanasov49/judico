@@ -4,9 +4,10 @@ interface IButtonModal {
     buttonText: string;
     classButton: string;
     buttonType: boolean;
+    clickButton?: () => void
 }
 import { motion } from "framer-motion";
-function ButtonModal({ buttonText, classButton, buttonType }: IButtonModal) {
+function ButtonModal({ buttonText, classButton, buttonType, clickButton }: IButtonModal) {
     const animateButton = {
         hidden: {
             opacity: 0,
@@ -23,6 +24,7 @@ function ButtonModal({ buttonText, classButton, buttonType }: IButtonModal) {
                 variants={animateButton}
                 type="button"
                 className={`button-modal button-modal_${classButton}`}
+                onClick={clickButton}
             >
                 {buttonText}
             </motion.button>
@@ -34,6 +36,7 @@ function ButtonModal({ buttonText, classButton, buttonType }: IButtonModal) {
                 variants={animateButton}
                 type="button"
                 className={`button-modal button-modal_learn button-modal_learn_${classButton}`}
+                onClick={clickButton}
             >
                 {buttonText}
             </motion.button>

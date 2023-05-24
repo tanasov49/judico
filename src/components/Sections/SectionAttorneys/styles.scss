@@ -4,9 +4,14 @@
     flex-direction: column;
     align-items: center;
     background: $bcgSection;
+    @media screen and (max-width: 768px) {
+        padding: 75px 42px 63px;
+    }
 }
 .attorneys {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     padding: 0;
     margin: 50px 0 0 0;
     list-style-type: none;
@@ -19,6 +24,11 @@
         flex-direction: column;
         align-items: center;
         max-width: 230px;
+        @media screen and (max-width: 768px) {
+            max-width: 331px;
+            min-width: 300px;
+            padding: 30px 90px;
+        }
         &__image {
             width: 128px;
             height: 128px;

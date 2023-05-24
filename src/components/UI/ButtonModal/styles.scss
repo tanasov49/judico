@@ -25,6 +25,9 @@
         @include hoverButtonModal($colorTextButtonHover, $colorBcgButtonHover);
         grid-row: 3;
         grid-column: 1;
+        @media screen and (max-width: 768px) {
+            margin: 0;
+        }
     }
     &_section-matters__buttons {
         color: $colorTextButton2;

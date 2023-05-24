@@ -8,6 +8,7 @@ body {
     max-width: $widthPage;
     margin: 0 auto;
     background: $bcgPage;
+    position: relative;
 }
 .progress-bar {
     position: fixed;
